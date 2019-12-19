@@ -10,7 +10,7 @@ function signupHandler(e) {
   const enteredPassword = passwordInput.value;
 
   if(enteredUserName.trim().length === 0) {
-    alert('Invalid input = password must be six character or longer');
+    alert('Invalid input - username must be not empty');
     return;
   }
   if(enteredPassword.trim().length <= 5) {
@@ -18,7 +18,13 @@ function signupHandler(e) {
     return;
   }
 
+  user = {
+    userName: enteredUserName,
+    password: enteredPassword
+  }
 
+  console.log(user);
+  console.log('Hi, I am ' + user.userName);
 }
 
 form.addEventListener('submit', signupHandler);
