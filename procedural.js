@@ -8,6 +8,15 @@ function signupHandler(e) {
   
   const passwordInput = document.getElementById('password');
   const enteredPassword = passwordInput.nodeValue;
+
+  if(enteredUserName.trim().length === 0) {
+    alert('Invalid input = password must be six character or longer');
+    return;
+  }
+  if(enteredPassword.trim().length <= 5) {
+    alert('Invalid input - password muast be six character or longer');
+    return;
+  }
 }
 
 form.addEventListener('submit', signupHandler);
