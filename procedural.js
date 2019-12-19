@@ -1,9 +1,13 @@
 const form = document.getElementById('user-input');
-const userNameInput = document.getElementById('username');
-const passwortInput = document.getElementById('password');
 
-function signupHandler() {
+function signupHandler(e) {
+  e.preventDefault();
 
+  const userNameInput = document.getElementById('username');
+  const enteredUserName = userNameInput.nodeValue;
+  
+  const passwordInput = document.getElementById('password');
+  const enteredPassword = passwordInput.nodeValue;
 }
 
 form.addEventListener('submit', signupHandler);
