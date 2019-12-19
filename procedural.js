@@ -4,10 +4,10 @@ function signupHandler(e) {
   e.preventDefault();
 
   const userNameInput = document.getElementById('username');
-  const enteredUserName = userNameInput.nodeValue;
+  const enteredUserName = userNameInput.value;
   
   const passwordInput = document.getElementById('password');
-  const enteredPassword = passwordInput.nodeValue;
+  const enteredPassword = passwordInput.value;
 
   if(enteredUserName.trim().length === 0) {
     alert('Invalid input = password must be six character or longer');
@@ -17,6 +17,8 @@ function signupHandler(e) {
     alert('Invalid input - password muast be six character or longer');
     return;
   }
+
+
 }
 
 form.addEventListener('submit', signupHandler);
