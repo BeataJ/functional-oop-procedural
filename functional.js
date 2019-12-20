@@ -31,6 +31,8 @@ function signupHandler(e) {
 
   const enteredUsername = getUserInput('username')
   const enteredPassword = getUserInput('password');
+
+  const newUser = createUser(enteredUsername, enteredPassword);
 }
 
 function connectForm(formId, formSubmitHandler) {
