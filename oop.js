@@ -1,4 +1,16 @@
-class Validator {}
+class Validator {
+  static REQUIRED = 'REQUIRED';
+  static MIN_LENGTH = 'MIN_LENGTH';
+
+  static validate(value, flag, validatorValue) {
+    if(flag === this.REQUIRED) {
+      return value.trim().length > 0;
+    }
+    if(flag === this.MIN_LENGTH) {
+      return value.trim().length > validatorValue;
+    }
+  }
+}
 
 class User {}
 
