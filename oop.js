@@ -44,5 +44,9 @@ class UserInputForm {
       return;
     } 
 
+    const newUser = new User(enteredUserName, enteredPassword);
+    console.log(newUser);
+    newUser.greet();
+
   }
 }
