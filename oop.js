@@ -12,7 +12,16 @@ class Validator {
   }
 }
 
-class User {}
+class User {
+  constructor(uName, uPassword){
+    this.userName = uName;
+    this.password = uPassword;
+  }
+
+  greet() {
+    console.log('hi, I am ' + this.userName);
+  }
+}
 
 class UserInputForm {
   constructor() {
