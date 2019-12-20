@@ -27,5 +27,13 @@ class UserInputForm {
     e.preventDefault();
     const enteredUserName = this.userNameInput.value;
     const enteredPassword = this.passwordInput.value;
-    }
+
+    if(!Validator.validate(enteredUserName, Validator.REQUIRED) || !Validator.validate(enteredPassword, Validator.MIN_LENGTH, 5)) {
+      alert(
+        'Invalid input - username or password is wrong (password should be at least six chracters)'
+      );
+      return;
+    } 
+
+  }
 }
