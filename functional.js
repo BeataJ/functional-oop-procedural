@@ -14,6 +14,18 @@ function getUserInput(inputElement) {
   return document.getElementById(inputElement).value;
 }
 
+function createUser(userName, userPassword) {
+  if(!validate(userName, REQUIRED) || !validate(userPassword, MIN_LENGTH, 5)) {
+    throw new Error(
+      'Invalid input - username or password is wrong (password should be at least six characters).'
+    )
+  }
+  return {
+    userName: userName,
+    password: userPassword
+  }
+}
+
 function signupHandler(e) {
   e.preventDefault();
 
