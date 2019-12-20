@@ -26,6 +26,10 @@ function createUser(userName, userPassword) {
   }
 }
 
+function greetUser(user) {
+  console.log('Hi, I am ' + user.userName);
+}
+
 function signupHandler(e) {
   e.preventDefault();
 
@@ -34,7 +38,7 @@ function signupHandler(e) {
 
   try{
     const newUser = createUser(enteredUsername, enteredPassword);
-    console.log(newUser)
+    greetUser(newUser)
   } catch (err) {
     alert(err.message);
   }
