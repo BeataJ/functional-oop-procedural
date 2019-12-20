@@ -1,3 +1,15 @@
+const REQUIRED = 'REQUIRED'; 
+const MIN_LENGTH = 'MIN_LENGTH'
+
+function validate(value, flag, validatorValue) {
+  if (flag === this.REQUIRED) {
+    return value.trim().length > 0;
+  }
+  if (flag === this.MIN_LENGTH) {
+    return value.trim().length > validatorValue;
+  }
+}
+
 function getUserInput(inputElement) {
   return document.getElementById(inputElement).value;
 }
